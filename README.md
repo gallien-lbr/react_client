@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This branch is made for learning purposes => making a todoList ! 
+=> https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
+
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -4,13 +4,12 @@ import Todo from "./components/Todo";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 
-
+// similar to class App extends React.Component 
 class App extends Component{  
 
   constructor(props)  {  
     super(props);
-    this.state =  { apiResponse: "" };
-
+    //this.state =  { apiResponse: "" };
   }
   
   // fetch data from api and store in apiResponse
@@ -29,24 +28,27 @@ class App extends Component{
   render() {
     
     const taskList = this.props.tasks.map(task => (
-    
     <Todo 
-     id={task.id} 
-     name={task.name} 
-     completed={task.completed}
-     key={task.id} />
+      id={task.id} 
+      name={task.name} 
+      completed={task.completed}
+      key={task.id} />
      )
     );
+
+    function addTask(name){
+      alert(name);
+     };
 
     return (
       <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
-      <Form />
+      <Form addTask={addTask} />
       
       <div className="filters btn-group stack-exception">
         <FilterButton name="All"/>
         <FilterButton name="Active" />
-        <FilterButton name="Tutu" />
+        <FilterButton name="Completed" />
       </div>
       
       <h2 id="list-heading">
