@@ -27,6 +27,9 @@ class App extends Component{
 
   render() {
     
+    /**
+     * feed taskList object 
+     */
     const taskList = this.props.tasks.map(task => (
     <Todo 
       id={task.id} 
@@ -54,6 +57,7 @@ class App extends Component{
       <h2 id="list-heading">
         3 tasks remaining
       </h2>
+      
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
