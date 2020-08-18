@@ -7,10 +7,10 @@ import FilterButton from "./components/FilterButton";
 // similar to class App extends React.Component 
 class App extends Component{  
 
-  constructor(props)  {  
-    super(props);
+  /*constructor(props)  {  
+    //super(props);
     //this.state =  { apiResponse: "" };
-  }
+  }*/
   
   // fetch data from api and store in apiResponse
   /*callAPI()  { 

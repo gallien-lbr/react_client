@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 
-function handleChange(e){
-    console.log("Typing");
-}
 
 function Form(props){
 
+    const [name, setName] = useState("");
+    
+    function handleChange(e) {
+        setName(e.target.value);
+    }
+    
     function handleSubmit(e) {
         e.preventDefault();
-        props.addTask("Say hello");
-      }
-    
-    const [name, setName] = useState('Use hooks!');
+        props.addTask(name);
+        setName("");
+    }
 
     return(
         <form onSubmit={handleSubmit}>
